@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "be2d36f0-af7c-4581-b354-92cea2c70d06",
+		"name": "NodejsAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24144880"
+	},
+	"item": [
+		{
+			"name": "listSchools",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/listSchools?userLat=39.7837304&userLon=-89.6501481",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"listSchools"
+					],
+					"query": [
+						{
+							"key": "userLat",
+							"value": "39.7837304"
+						},
+						{
+							"key": "userLon",
+							"value": "-89.6501481"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddSchools",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Springfield High\",\r\n  \"address\": \"742 Evergreen Terrace, Springfield\",\r\n  \"latitude\": 39.7837304,\r\n  \"longitude\": -89.6501481\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/addSchool",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"addSchool"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
